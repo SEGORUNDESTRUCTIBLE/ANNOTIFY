@@ -1,0 +1,29 @@
+<Window x:Class="ScreenAnnotation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScreenAnnotation"
+        mc:Ignorable="d"
+        Title="Screen Annotation"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        WindowState="Maximized">
+    <Grid>
+        <InkCanvas x:Name="inkCanvas" Background="Transparent" />
+        <local:Toolbar x:Name="toolbar" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="20"
+                       PenButtonClick="PenButton_Click"
+                       HighlighterButtonClick="HighlighterButton_Click"
+                       EraserButtonClick="EraserButton_Click"
+                       ColorButtonClick="ColorButton_Click"
+                       ThicknessChanged="ThicknessSlider_ValueChanged"
+                       UndoButtonClick="UndoButton_Click"
+                       RedoButtonClick="RedoButton_Click"
+                       ClearButtonClick="ClearButton_Click"
+                       ScreenshotButtonClick="ScreenshotButton_Click"
+                       ExitButtonClick="ExitButton_Click"/>
+    </Grid>
+</Window>
